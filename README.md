@@ -57,6 +57,12 @@ directory yet; the notes above are the design brief, not a claim.
 - Emulating another architecture (that is Rosetta's / QEMU's job).
 - Packaging games, iOS apps, or anything project-specific.
 
+## Disclaimer
+
+No warranty, no liability, and no third-party binaries in this repository. Read
+[DISCLAIMER.md](DISCLAIMER.md) before use — it covers data loss, device damage, vendor licenses
+and platform terms. In short: test on hardware you can afford to lose.
+
 ## License
 
 No license file yet; treat the code as all rights reserved until one is added.
