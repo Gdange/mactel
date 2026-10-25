@@ -11,6 +11,17 @@ and documents where it stops.
 | [`dotnet-universal-launcher`](dotnet-universal-launcher/) | works, verified | Build a universal (x86_64 + arm64) launcher for a .NET app |
 | [`pe-loader`](pe-loader/) | experiment, no code yet | Call one exported function of a Windows x64 DLL from a macOS process |
 
+## Quick start
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Gdange/mactel/main/dotnet-universal-launcher/build.sh | bash -s -- ./path/to/MyApp
+```
+
+That is the whole install: nothing is cloned and nothing is written outside the project. The
+universal launcher lands at `<project>/bin/universal/<name>`; pass a second argument to put it
+somewhere else. Needs `dotnet` (SDK 8+) and `lipo` (Xcode command line tools), and works on an
+Intel or an Apple silicon Mac.
+
 ## dotnet-universal-launcher
 
 A .NET console app is `app.dll` plus a native *apphost* launcher. The apphost is architecture
