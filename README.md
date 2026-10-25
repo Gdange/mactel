@@ -57,6 +57,21 @@ directory yet; the notes above are the design brief, not a claim.
 - Emulating another architecture (that is Rosetta's / QEMU's job).
 - Packaging games, iOS apps, or anything project-specific.
 
+## Tools and related projects
+
+This repository ships none of these; the links are where the pieces come from and where to look
+next.
+
+| Tool | Used for | Link |
+|---|---|---|
+| .NET SDK / runtime | the `dotnet build -r` apphosts that get joined | https://github.com/dotnet/runtime |
+| `lipo` (Xcode command line tools) | joining the two apphosts | https://developer.apple.com/xcode/ |
+| nxnative | the porting project these notes came from; the Intel Mac page lives in its `docs/agents/` | https://github.com/seedds/nxnative |
+| noodle | builds Apple's Oodle `oo2core` DLL for Windows x64 — the DLL the PE loader notes describe loading | https://github.com/Sainan/noodle |
+| Wine | the general alternative to a one-function PE loader | https://github.com/wine-mirror/wine |
+| zsign | signs the iOS bundles produced in the sibling workflow (faster than `codesign` on large bundles) | https://github.com/zhlynn/zsign |
+| `devicectl` (Xcode) | installing a signed `.app` on a device | https://developer.apple.com/documentation/xcode |
+
 ## Disclaimer
 
 No warranty, no liability, and no third-party binaries in this repository. Read
